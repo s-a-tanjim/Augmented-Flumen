@@ -48,20 +48,20 @@
     function initMap() {
       map = new google.maps.Map(document.getElementById("google-map"), {
         center: {
-          lat: 25.0173785,
-          lng: 91.256207,
+          lat: 23.962343,
+          lng: 90.2541079,
         },
-        zoom: 10,
+        zoom: 7,
       });
 
       //Define the LatLng coordinates for the polygon's path.
       var coords = [
-        {lat: 25.0900982, lng: 91.1457965},
-        {lat: 25.0175751, lng: 91.1644728},
-        {lat: 24.9911618, lng: 91.1941756},
-        {lat: 25.0184374, lng: 91.2730635},
-        {lat: 25.0284058, lng: 91.349923},
-        {lat: 25.1060474, lng: 91.3301214},
+        {lat: 24.7298637, lng: 91.5383055},
+        {lat: 24.8258568, lng: 91.7253107},
+        {lat: 25.0349044, lng: 91.6491357},
+        {lat: 25.1006783, lng: 91.2224098},
+        {lat: 24.98965, lng: 91.1252741},
+        {lat: 24.8357499, lng: 91.1536449},
       ];
 
       var coords1 = [
@@ -70,6 +70,31 @@
         {lat: 24.2532065, lng: 91.4562407},
         {lat: 24.3478672, lng: 91.1754862},
         {lat: 24.2562765, lng: 91.0445415},
+      ];
+
+      var coords2 = [
+        {lat: 24.1852978, lng: 89.6870689},
+        {lat: 24.2584531, lng: 89.5650601},
+        {lat: 24.381392, lng: 89.6015225},
+        {lat: 24.3784202, lng: 89.6939387},
+        {lat: 24.3050965, lng: 89.769913},
+      ];
+
+      var coords3 = [
+        {lat: 23.489942, lng: 90.6996829},
+        {lat: 23.4217429, lng: 90.7480171},
+        {lat: 23.3509869, lng: 90.7021992},
+        {lat: 23.3260518, lng: 90.621108},
+        {lat: 23.420156, lng: 90.5946216},
+        {lat: 23.5253457, lng: 90.63362},
+      ];
+
+      var coords4 = [
+        {lat: 25.5304307, lng: 89.6540712},
+        {lat: 25.7659899, lng: 89.4946946},
+        {lat: 25.9224482, lng: 89.6463698},
+        {lat: 25.8604524, lng: 89.7773321},
+        {lat: 25.6165346, lng: 89.8001461},
       ];
 
       //Construct the polygon.
@@ -85,6 +110,16 @@
 
       var editablePolygon1 = new google.maps.Polygon({
         paths: coords1,
+        strokeColor: '#5ad1cd',
+        strokeOpacity: 0.8,
+        strokeWeight: 2,
+        fillColor: '#5ad1cd',
+        fillOpacity: 0.35,
+        editable: false
+      });
+
+      var editablePolygon2 = new google.maps.Polygon({
+        paths: coords2,
         strokeColor: '#FF0000',
         strokeOpacity: 0.8,
         strokeWeight: 2,
@@ -93,9 +128,32 @@
         editable: false
       });
 
+      var editablePolygon3 = new google.maps.Polygon({
+        paths: coords3,
+        strokeColor: '#FF0000',
+        strokeOpacity: 0.8,
+        strokeWeight: 2,
+        fillColor: '#FF0000',
+        fillOpacity: 0.35,
+        editable: false
+      });
+
+      var editablePolygon4 = new google.maps.Polygon({
+        paths: coords4,
+        strokeColor: '#FF7676',
+        strokeOpacity: 0.8,
+        strokeWeight: 2,
+        fillColor: '#FF7676',
+        fillOpacity: 0.35,
+        editable: false
+      });
+
 
       editablePolygon.setMap(map);
       editablePolygon1.setMap(map);
+      editablePolygon2.setMap(map);
+      editablePolygon3.setMap(map);
+      editablePolygon4.setMap(map);
     }
   </script>
 

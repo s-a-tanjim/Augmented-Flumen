@@ -18,7 +18,7 @@
                 />
               </div>
               <div class="form-group">
-                <label for="exampleInputLocation">Location</label>
+                <label for="exampleInputLocation">Affected Location</label>
                 <input
                   :disabled="isLoading"
                   v-model="location"
